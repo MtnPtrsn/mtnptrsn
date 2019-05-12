@@ -5,8 +5,8 @@ const theme = {
       base: 16,
     },
     family: {
-      heading: 'Poppins',
-      default: 'Open Sans',
+      heading: `'Poppins', sans-serif`,
+      default: `'Open Sans', sans-serif`,
     },
   },
   colors: {
@@ -14,6 +14,19 @@ const theme = {
     grey: '#F9F9F9',
     heading: '#262626',
     bodyText: '#666666',
+  },
+  breakpoints: {
+    xs: 0,
+    sm: 576,
+    md: 768,
+    lg: 992,
+    xl: 1200,
+  },
+  spacing: {
+    0: '0px',
+    1: '12px',
+    2: '24px',
+    3: '48px',
   },
 }
 

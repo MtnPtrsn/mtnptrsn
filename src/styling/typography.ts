@@ -16,7 +16,7 @@ const getTypograpgyStyles = () => {
     @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Poppins:400,600,700');
 
     body {
-      font-family: ${theme.typography.family.default}, sans-serif;
+      font-family: ${theme.typography.family.default};
       font-size: ${theme.typography.size.base}px;
     }
 
@@ -30,7 +30,7 @@ const getTypograpgyStyles = () => {
     h3,
     h4,
     h5 {
-      font-family: ${theme.typography.family.heading}, sans-serif;
+      font-family: ${theme.typography.family.heading};
       color: ${theme.colors.heading};
     }
 
