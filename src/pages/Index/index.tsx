@@ -10,7 +10,7 @@ import { indexNavigationItems } from './data'
 import { css } from 'styled-components'
 
 const IndexPage = () => (
-  <Layout>
+  <Layout hideFABMenu>
     <IndexWrapper>
       <IndexLeft>
         <img
@@ -21,9 +21,9 @@ const IndexPage = () => (
         />
       </IndexLeft>
       <IndexRight>
-        <Margin all={2}>
+        <Margin all={3}>
           <h2>mtnptrsn</h2>
-          <Margin vertical={2}>
+          <Margin vertical={3}>
             <p>
               Minimalistc software developer with a passion for creating quality
               applications.

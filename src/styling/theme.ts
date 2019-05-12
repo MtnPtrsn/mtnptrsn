@@ -1,3 +1,11 @@
+const getSpacingAndSpacingInverse = (spacing: {
+  [key: number]: string
+}): { [key: string]: string } =>
+  Object.entries(spacing).reduce(
+    (acc, [key, value]) => ({ ...acc, [`-${key}`]: `-${value}`, [key]: value }),
+    {},
+  )
+
 const theme = {
   typography: {
     size: {
@@ -22,14 +30,19 @@ const theme = {
     lg: 992,
     xl: 1200,
   },
-  spacing: {
+  spacing: getSpacingAndSpacingInverse({
     0: '0px',
-    1: '12px',
-    2: '18px',
-    3: '24px',
-    4: '36px',
-    5: '48px',
-  },
+    1: '6px',
+    2: '12px',
+    3: '18px',
+    4: '24px',
+    5: '30px',
+    6: '36px',
+    7: '42px',
+    8: '48px',
+    9: '54px',
+    10: '60px',
+  }),
 }
 
 export default theme
