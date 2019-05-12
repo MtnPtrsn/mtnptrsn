@@ -1,13 +1,38 @@
 import React from 'react'
+import { Margin } from 'styled-components-spacing'
 import Layout from '../../components/Layout'
-import Container from '../../components/Container'
+import { IndexLeft, IndexRight, IndexWrapper } from './styled'
+import IndexNavigation from './IndexNavigation'
+
+// TODO: Fix this linting issue
+import ImgProblemSolving from '../../images/problem-solving.svg'
+import { indexNavigationItems } from './data'
+import { css } from 'styled-components'
 
 const IndexPage = () => (
   <Layout>
-    <Container>
-      <h3>Hi!</h3>
-      <p>Is there a big difference between poppins and open sans?</p>
-    </Container>
+    <IndexWrapper>
+      <IndexLeft>
+        <img
+          css={css`
+            max-width: 90%;
+          `}
+          src={ImgProblemSolving}
+        />
+      </IndexLeft>
+      <IndexRight>
+        <Margin all={2}>
+          <h2>mtnptrsn</h2>
+          <Margin vertical={2}>
+            <p>
+              Minimalistc software developer with a passion for creating quality
+              applications.
+            </p>
+          </Margin>
+          <IndexNavigation links={indexNavigationItems} />
+        </Margin>
+      </IndexRight>
+    </IndexWrapper>
   </Layout>
 )
 
